@@ -69,5 +69,7 @@ document.getElementById("saving-calculator").addEventListener("click", function(
        netBalanceElement.innerText = netBalance;
     } else{
         overSavingElement.style.display = "block";
+        savingElement.innerText = 0;
+        netBalanceElement.innerText = 0;
     }
 })
