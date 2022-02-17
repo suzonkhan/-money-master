@@ -35,6 +35,7 @@ function getUserData(field) {
 }
 
 document.getElementById("cost-calculate").addEventListener("click", function(){
+    debugger;
     //Receive user data from input fields
     const income = getUserData("income");
     const foodCost = getUserData("food");
@@ -53,10 +54,12 @@ document.getElementById("cost-calculate").addEventListener("click", function(){
     // Display Income and total cost into webpage after validation   
      if(dataValidation && income > totalCost){
         expensesElement.innerText = totalCost;
-        primaryBalanceElement.innerText = income - totalCost
+        primaryBalanceElement.innerText = income - totalCost;
      } else {
         finalWarningElement.innerText = "Income should be more than expenses.";
         finalWarningElement.style.display = "block";
+        expensesElement.innerText = 0;
+        primaryBalanceElement.innerText = 0;
      }  
 })
 
